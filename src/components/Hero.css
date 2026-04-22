@@ -4,16 +4,18 @@
   min-height: 92vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   position: relative;
   overflow: hidden;
 }
 
 .hero-top {
+  position: relative;
+  z-index: 2;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, auto);
   gap: 24px;
   padding-bottom: 40px;
+  padding-right: clamp(0px, calc(18vw + 80px), 340px);
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.18em;
@@ -28,6 +30,7 @@
 .hero-title {
   position: relative;
   padding-bottom: 40px;
+  margin-top: auto;
 }
 
 .hero-title .big {
@@ -150,6 +153,7 @@
   .hero-top {
     grid-template-columns: 1fr;
     padding-bottom: 24px;
+    padding-right: 0;
   }
 
   .hero-top .right {
