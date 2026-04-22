@@ -64,21 +64,25 @@ h1,
 h2,
 h3 {
   font-family: var(--font-serif);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 0.95;
+  font-weight: 380;
+  letter-spacing: -0.025em;
+  line-height: 0.98;
+  font-variation-settings: 'opsz' 144, 'SOFT' 30;
 }
 
 .display {
   font-size: clamp(56px, 10vw, 140px);
+  font-variation-settings: 'opsz' 144, 'SOFT' 40;
 }
 
 .h2 {
   font-size: clamp(40px, 6vw, 84px);
+  font-variation-settings: 'opsz' 120, 'SOFT' 30;
 }
 
 .h3 {
   font-size: clamp(28px, 3.4vw, 44px);
+  font-variation-settings: 'opsz' 72, 'SOFT' 20;
 }
 
 .italic {

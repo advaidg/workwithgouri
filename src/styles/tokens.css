@@ -11,9 +11,9 @@
   --lime: #c6f24e;
   --plum: #3b1e1a;
 
-  --font-serif: 'Instrument Serif', serif;
-  --font-sans: 'Space Grotesk', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-serif: 'Fraunces', 'Instrument Serif', Georgia, serif;
+  --font-sans: 'Inter', 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
 
   --duration-fast: 150ms;
   --duration-normal: 300ms;
