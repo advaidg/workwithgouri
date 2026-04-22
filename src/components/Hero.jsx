@@ -42,9 +42,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-portrait" data-hover ref={portraitRef}>
-        <div className="ph">
-          <span>portrait — 4:5</span>
-        </div>
+        <img src="/portrait.jpg" alt="Gouri Gireesan" loading="eager" fetchpriority="high" width="320" height="440" />
       </div>
 
       <div className="hero-title">
@@ -74,8 +72,8 @@ export default function Hero() {
           <strong>Reels · SEO · Carousels</strong>
         </div>
         <div>
-          <span>Since</span>
-          <strong>2024 — onward</strong>
+          <span>Trained at</span>
+          <strong>Digital Scholar</strong>
         </div>
       </div>
 

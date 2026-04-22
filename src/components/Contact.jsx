@@ -22,18 +22,19 @@ export default function Contact() {
   return (
     <section className="contact" id="contact">
       <div className="contact-inner">
-        <span className="eyebrow reveal">Let's talk · 06</span>
+        <span className="eyebrow reveal">Let&apos;s talk · 06</span>
         <h2 className="reveal delay-1" style={{ marginTop: 16 }}>
-          Let's create
+          Let&apos;s create
           <br />
           content that <span className="italic">connects.</span>
         </h2>
 
         <div className="contact-grid">
           <p className="big reveal delay-2">
-            Reels editing, content creation, social media creatives — or a
-            long-term project. I'm open for collaborations that help brands
-            sound human and convert.
+            Open for reels editing, content creation, social media creatives
+            and long-term projects. If you&apos;re building a brand that wants
+            to look premium and show up consistently, I&apos;d love to hear
+            about it.
           </p>
 
           <div className="links reveal delay-2">

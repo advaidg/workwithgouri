@@ -19,24 +19,36 @@
   position: relative;
 }
 
-.about-img .ph {
+.about-img img {
   width: 100%;
   height: 100%;
-  background:
-    linear-gradient(180deg, rgba(255, 90, 31, 0.15) 0%, transparent 60%),
-    repeating-linear-gradient(90deg, #2a2722 0 22px, #1f1d18 22px 44px);
-  display: flex;
-  align-items: flex-end;
-  padding: 24px;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
 }
 
-.about-img .ph span {
+.about-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    rgba(21, 19, 15, 0.55) 100%
+  );
+  pointer-events: none;
+}
+
+.about-tag {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: var(--cream);
   font-family: var(--font-mono);
   font-size: 10px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--cream);
-  opacity: 0.8;
+  z-index: 1;
 }
 
 .about-img .badge {

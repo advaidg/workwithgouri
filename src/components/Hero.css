@@ -71,35 +71,13 @@
   z-index: 1;
 }
 
-.hero-portrait .ph {
+.hero-portrait img {
   width: 100%;
   height: 100%;
-  background:
-    radial-gradient(
-      ellipse at 50% 35%,
-      rgba(255, 255, 255, 0.25) 0%,
-      transparent 45%
-    ),
-    repeating-linear-gradient(
-      135deg,
-      var(--coral) 0 18px,
-      var(--coral-deep) 18px 36px
-    );
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 20px;
-  color: #fff;
-}
-
-.hero-portrait .ph span {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  background: rgba(21, 19, 15, 0.5);
-  padding: 6px 10px;
-  border-radius: 4px;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  filter: saturate(1.05) contrast(1.02);
 }
 
 .hero-meta {

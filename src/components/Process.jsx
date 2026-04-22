@@ -9,7 +9,7 @@ const STEPS = [
         research
       </>
     ),
-    desc: "Brand tone, audience behavior and what's actually trending in your niche this week — not last year.",
+    desc: 'Brand tone, audience behaviour and what\u2019s actually working in your niche this month — not last year.',
   },
   {
     n: 'STEP / 02',
@@ -19,17 +19,17 @@ const STEPS = [
         storyboard
       </>
     ),
-    desc: 'Hook-first scripts, frame-by-frame storyboards, caption drafts and a thumb-stopping cover plan.',
+    desc: 'Hook-first scripts, frame-by-frame storyboards, caption drafts and covers designed to earn the tap.',
   },
   {
     n: 'STEP / 03',
     title: (
       <>
-        Shoot &amp;<br />
+        Design &amp;<br />
         edit
       </>
     ),
-    desc: 'Direction, lighting notes, edit, sound-design, subtitles, color — until it looks and feels premium.',
+    desc: 'Carousels, posters, reel edits, sound-design, subtitles, QC — polished until the scroll actually stops.',
   },
   {
     n: 'STEP / 04',
@@ -39,7 +39,7 @@ const STEPS = [
         learn
       </>
     ),
-    desc: 'Schedule, caption, boost when it matters, measure — and feed what we learn back into the next batch.',
+    desc: 'Schedule, caption, measure and iterate. Every piece feeds the next one — that\u2019s how consistency compounds.',
   },
 ];
 

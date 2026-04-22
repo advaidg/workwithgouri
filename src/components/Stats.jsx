@@ -5,7 +5,7 @@ const STATS = [
   { to: 425, sym: 'K', label: 'Peak reel views', decimals: 0 },
   { to: 20, sym: '+', label: 'Reels created', decimals: 0 },
   { to: 30, sym: '+', label: 'Carousels & creatives', decimals: 0 },
-  { to: 3, sym: '+', label: 'Brands & projects', decimals: 0 },
+  { to: 5, sym: '+', label: 'Brands & projects', decimals: 0 },
 ];
 
 function Counter({ to, decimals = 0 }) {

@@ -4,26 +4,26 @@ const SERVICES = [
   {
     num: '(01)',
     title: 'Instagram Reels',
-    desc: 'Engaging reels that capture attention and drive reach — built around hooks, pacing and trend relevance.',
+    desc: 'Hook-first reels built for awareness and reach — scripting, direction, editing, captions and covers that feel premium in the feed.',
     meta: 'Video',
   },
   {
     num: '(02)',
-    title: 'Short-form Video Content',
-    desc: 'Creative short videos for Instagram, YouTube Shorts and more — scripting, direction, editing and captions.',
-    meta: 'Video',
+    title: 'Carousels & Creatives',
+    desc: 'Educational carousels and scroll-native posters — clear hierarchy, strong covers, designed for saves, shares and swipes.',
+    meta: 'Design',
   },
   {
     num: '(03)',
-    title: 'Social Media Posters',
-    desc: 'Eye-catching posts designed to match your brand — feed posters and stories that feel native, not stock.',
-    meta: 'Design',
+    title: 'Social Media Content',
+    desc: 'End-to-end content for Instagram, LinkedIn and beyond — strategy, calendar, shoot direction and on-brand execution.',
+    meta: 'Strategy',
   },
   {
     num: '(04)',
-    title: 'Carousel Designs',
-    desc: 'Informative and engaging carousel posts that educate, entertain and convert — earning swipes, saves and shares.',
-    meta: 'Design',
+    title: 'SEO & WordPress',
+    desc: 'On-page SEO, quality checking and WordPress updates — the un-glamorous glue that makes creative actually rank and convert.',
+    meta: 'Marketing',
   },
 ];
 
@@ -42,8 +42,8 @@ export default function Services() {
           </h2>
         </div>
         <p className="reveal delay-2">
-          End-to-end content, from the first hook to the last second of your
-          reel hitting the feed. Four ways we can work together.
+          Content that&apos;s pretty and content that performs shouldn&apos;t
+          be two different things. Four ways I help brands do both.
         </p>
       </div>
 

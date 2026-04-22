@@ -1,13 +1,146 @@
+import { useState } from 'react';
+import Lightbox from './Lightbox.jsx';
 import './Works.css';
 
+const WORKS = [
+  {
+    id: 'health',
+    kicker: 'Carousel · Healthcare · 5 slides',
+    title: 'How to fix your posture — Ekyam Clinic',
+    description:
+      'An educational carousel breaking down posture, why it matters, and simple daily fixes. Built for awareness and saves.',
+    cover: '/works/health-1.jpg',
+    variant: 'w-editorial',
+    slides: [
+      '/works/health-1.jpg',
+      '/works/health-2.jpg',
+      '/works/health-3.jpg',
+      '/works/health-4.jpg',
+      '/works/health-5.jpg',
+    ],
+    type: 'carousel',
+  },
+  {
+    id: 'reel-sinus',
+    kicker: 'Reel · 00:30',
+    title: '5 signs you\u2019re ignoring a sinus problem',
+    description:
+      'A 30-second awareness reel for Ekyam Clinic — hook-first, typography-led, built to educate and save.',
+    cover: '/works/reel-3.jpg',
+    poster: '/works/reel-3.jpg',
+    variant: 'w-reel',
+    slides: ['/works/reel-3.mp4'],
+    type: 'video',
+  },
+  {
+    id: 'myth',
+    kicker: 'Carousel · Healthcare · 6 slides',
+    title: 'Myth & facts of sports injury',
+    description:
+      'A side-by-side myth vs fact carousel for Ekyam Clinic. Clean editorial colour blocking, built for swipes and shares.',
+    cover: '/works/myth-1.jpg',
+    variant: 'w-dark',
+    slides: [
+      '/works/myth-1.jpg',
+      '/works/myth-2.jpg',
+      '/works/myth-3.jpg',
+      '/works/myth-4.jpg',
+      '/works/myth-5.jpg',
+      '/works/myth-6.jpg',
+    ],
+    type: 'carousel',
+  },
+  {
+    id: 'baby',
+    kicker: 'Poster · Healthcare',
+    title: 'Is your baby growing well? — Mother & Child',
+    description:
+      'Awareness poster on infant weight milestones — warm palette, editorial icons, gentle storytelling.',
+    cover: '/works/baby-growth.jpg',
+    variant: 'w-soft',
+    slides: ['/works/baby-growth.jpg'],
+    type: 'image',
+  },
+  {
+    id: 'reel-neck',
+    kicker: 'Reel · 00:05',
+    title: 'Neck pain? Put down the phone.',
+    description:
+      'A playful 5-second loop for Ekyam Clinic — illustrated, punchy, and instantly relatable.',
+    cover: '/works/reel-1.jpg',
+    poster: '/works/reel-1.jpg',
+    variant: 'w-reel-s',
+    slides: ['/works/reel-1.mp4'],
+    type: 'video',
+  },
+  {
+    id: 'casa',
+    kicker: 'Poster · Real Estate',
+    title: 'Casa Tudor — Casa Grante',
+    description:
+      'A premium launch poster for a 3 BHK luxury villa — strong hierarchy, price anchor, clean CTA.',
+    cover: '/works/casa-tudor.jpg',
+    variant: 'w-wide',
+    slides: ['/works/casa-tudor.jpg'],
+    type: 'image',
+  },
+  {
+    id: 'reel-carpal',
+    kicker: 'Reel · 00:25',
+    title: 'Carpal Tunnel Syndrome — Ekyam Clinic',
+    description:
+      'An editorial 25-second health reel: large serif type, calm palette, clinical credibility.',
+    cover: '/works/reel-2.jpg',
+    poster: '/works/reel-2.jpg',
+    variant: 'w-reel',
+    slides: ['/works/reel-2.mp4'],
+    type: 'video',
+  },
+  {
+    id: 'ethics',
+    kicker: 'Carousel · Career',
+    title: 'Work Ethics — Jijivisha Global',
+    description:
+      'A 5-principle carousel cover — tactile paper texture, anchored eyebrow, clear promise for the swipe.',
+    cover: '/works/work-ethics.jpg',
+    variant: 'w-square',
+    slides: ['/works/work-ethics.jpg'],
+    type: 'image',
+  },
+  {
+    id: 'word',
+    kicker: 'Interactive Post · Retail',
+    title: 'Word search activation — 1st Step',
+    description:
+      'A puzzle post that turns product discovery into play — longer dwell time, higher saves.',
+    cover: '/works/word-search.jpg',
+    variant: 'w-square',
+    slides: ['/works/word-search.jpg'],
+    type: 'image',
+  },
+  {
+    id: 'test',
+    kicker: 'Story · Retail',
+    title: 'Testimonial story — 1st Step',
+    description:
+      'A soft, warm testimonial story — emphasis on trust and quality, native to the Instagram story format.',
+    cover: '/works/testimonial.jpg',
+    variant: 'w-tall',
+    slides: ['/works/testimonial.jpg'],
+    type: 'image',
+  },
+];
+
 export default function Works() {
+  const [active, setActive] = useState(null);
+
   return (
     <section className="works" id="works">
       <div className="works-head">
         <div>
           <span className="eyebrow reveal">Selected work · 03</span>
           <h2 className="h2 reveal delay-1" style={{ marginTop: 12 }}>
-            My
+            Selected
             <br />
             <span className="italic" style={{ color: 'var(--coral)' }}>
               works.
@@ -18,206 +151,39 @@ export default function Works() {
           className="reveal delay-2"
           style={{ maxWidth: '40ch', color: 'var(--ink-soft)' }}
         >
-          A small peek into reels, carousels and campaigns. Hover each card for
-          context. Real posts coming soon.
+          A peek into reels, carousels and posters for Ekyam Clinic, Mother
+          &amp; Child, Casa Grante, Jijivisha Global and 1st Step. Tap a card to
+          open.
         </p>
       </div>
 
       <div className="works-grid">
-        {/* Featured — Product Showcase reel */}
-        <div className="work w-featured reveal" data-hover>
-          <div className="copy">
-            <span
-              className="chip-top"
-              style={{
-                position: 'relative',
-                top: 0,
-                left: 0,
-                marginBottom: 18,
-                display: 'inline-block',
-              }}
-            >
-              Featured · Reel
-            </span>
-            <h4>Product Showcase — a reel that hit 425K.</h4>
-            <p>
-              Worked with a brand to turn a simple product into a scroll-stopper
-              — trend-based reel, clean creative, storytelling-first. The kind
-              of content that feels relatable and converts.
-            </p>
-            <div className="stats">
-              <div className="s">
-                <b>425K</b>
-                <span>Views</span>
-              </div>
-              <div className="s">
-                <b>—</b>
-                <span>Likes</span>
-              </div>
-              <div className="s">
-                <b>—</b>
-                <span>Engagement</span>
-              </div>
+        {WORKS.map((work) => (
+          <button
+            key={work.id}
+            className={`work ${work.variant}`}
+            onClick={() => setActive(work)}
+            data-hover
+            aria-label={`Open ${work.title}`}
+          >
+            <div className="work-media">
+              <img src={work.cover} alt={work.title} loading="lazy" />
+              {work.type === 'video' && (
+                <span className="play-badge" aria-hidden="true">
+                  ▶
+                </span>
+              )}
+              <span className="work-chip">{work.kicker}</span>
             </div>
-          </div>
-          <div className="phone">
-            <div className="screen">
-              <div className="reel">
-                <div>
-                  when the brief says
-                  <br />
-                  <em style={{ color: 'var(--butter)' }}>"just go viral"</em>
-                </div>
-                <div>
-                  but your hook is
-                  <br />
-                  <em style={{ color: 'var(--lime)' }}>actually good</em>
-                </div>
-                <div>
-                  POV: you finally
-                  <br />
-                  nailed the transition
-                </div>
-                <div>
-                  and the algorithm
-                  <br />
-                  says <em>thank you</em>
-                </div>
-              </div>
-              <div className="ui">
-                <div className="prog" />
-                <div className="right-stack">
-                  <div className="ic">♥</div>
-                  <div className="ic">💬</div>
-                  <div className="ic">↗</div>
-                  <div className="ic">⋯</div>
-                </div>
-                <div className="handle">@gouri.creates</div>
-                <div className="cap">
-                  behind every "viral" reel is a spreadsheet and three rewrites
-                  ✦
-                </div>
-              </div>
+            <div className="work-info">
+              <h4>{work.title}</h4>
+              <span className="open">View project&nbsp;↗</span>
             </div>
-          </div>
-        </div>
-
-        <div className="work w-1 reveal delay-1" data-hover>
-          <div className="cover">
-            <h3>
-              "Work Ethics —<br />
-              the <em>key</em> to<br />
-              professional<br />
-              success"
-            </h3>
-          </div>
-          <span className="chip-top">Carousel · 6 slides</span>
-          <div className="info">
-            <h4>Professional habits that compound</h4>
-            <div className="tag">Educational · Saved &amp; shared</div>
-          </div>
-        </div>
-
-        <div className="work w-2 reveal delay-2" data-hover>
-          <div className="cover">
-            <span className="topcap">Awareness · Health</span>
-            <h3>
-              Got <em>Neck</em>
-              <br />
-              <span>Pain?</span>
-            </h3>
-            <div className="btm">
-              A carousel explaining posture, symptoms and fixes in 7 visual
-              frames.
-            </div>
-          </div>
-          <span className="chip-top">Carousel · 7 slides</span>
-        </div>
-
-        <div className="work w-3 reveal" data-hover>
-          <h4>
-            The Loop — word
-            <br />
-            search activation
-          </h4>
-          <div className="grid4">
-            <span>T</span>
-            <span>R</span>
-            <span className="hit">E</span>
-            <span className="hit">N</span>
-            <span className="hit">D</span>
-            <span>S</span>
-            <span>W</span>
-            <span>V</span>
-            <span className="hit">R</span>
-            <span>E</span>
-            <span>A</span>
-            <span>C</span>
-            <span>H</span>
-            <span>O</span>
-            <span>I</span>
-            <span className="hit">E</span>
-            <span>H</span>
-            <span>O</span>
-            <span>O</span>
-            <span className="hit">K</span>
-            <span>R</span>
-            <span>R</span>
-            <span className="hit">E</span>
-            <span className="hit">E</span>
-            <span className="hit">L</span>
-            <span className="hit">S</span>
-            <span>F</span>
-            <span>D</span>
-            <span>A</span>
-            <span>L</span>
-            <span>S</span>
-            <span>E</span>
-            <span>B</span>
-            <span>K</span>
-            <span>S</span>
-            <span>L</span>
-            <span>S</span>
-            <span>A</span>
-            <span>V</span>
-            <span>E</span>
-            <span>D</span>
-            <span>L</span>
-          </div>
-          <div className="cap">Interactive Post · Engagement win</div>
-        </div>
-
-        <div className="work w-4 reveal delay-1" data-hover>
-          <div className="cover">
-            <span>Lifestyle · Reel</span>
-            <h4>
-              "I quit my
-              <br />
-              headspace"
-            </h4>
-          </div>
-          <span className="chip-top">Reel · 00:42</span>
-        </div>
-
-        <div className="work w-5 reveal delay-2" data-hover>
-          <div className="cover">
-            <div>
-              <span className="serif-date italic">editorial, 2025</span>
-              <h4 style={{ marginTop: 10 }}>
-                A quiet morning
-                <br />
-                with <em>oat milk</em>
-                <br />
-                and a new brief.
-              </h4>
-            </div>
-            <span className="serif-date italic" style={{ opacity: 0.6 }}>
-              lifestyle · 09
-            </span>
-          </div>
-          <span className="chip-top">Lifestyle · Post</span>
-        </div>
+          </button>
+        ))}
       </div>
+
+      <Lightbox work={active} onClose={() => setActive(null)} />
     </section>
   );
 }

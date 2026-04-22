@@ -6,6 +6,7 @@ import Hero from './components/Hero.jsx';
 import Marquee from './components/Marquee.jsx';
 import About from './components/About.jsx';
 import Stats from './components/Stats.jsx';
+import Brands from './components/Brands.jsx';
 import Services from './components/Services.jsx';
 import Works from './components/Works.jsx';
 import Tools from './components/Tools.jsx';
@@ -43,6 +44,7 @@ export default function App() {
       <Marquee />
       <About />
       <Stats />
+      <Brands />
       <Services />
       <Works />
       <Tools />
