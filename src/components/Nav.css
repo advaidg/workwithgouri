@@ -1,0 +1,80 @@
+nav.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
+nav.top .mark {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-style: italic;
+  letter-spacing: -0.01em;
+}
+
+nav.top .mark b {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+
+nav.top ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+nav.top ul a {
+  position: relative;
+  padding: 6px 0;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+nav.top ul a:hover {
+  opacity: 1;
+}
+
+nav.top ul a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav.top ul a:hover::after {
+  transform: scaleX(1);
+}
+
+nav.top .time {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+
+@media (max-width: 860px) {
+  nav.top ul,
+  nav.top .time {
+    display: none;
+  }
+}

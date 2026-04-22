@@ -1,0 +1,73 @@
+.process {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.process-head {
+  max-width: 1400px;
+  margin: 0 auto 56px;
+}
+
+.process-head .eyebrow {
+  color: var(--butter);
+}
+
+.process-head .eyebrow::before {
+  background: var(--butter);
+}
+
+.process-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: #2a2722;
+  border: 1px solid #2a2722;
+}
+
+.step {
+  background: var(--ink);
+  padding: 40px 28px;
+  position: relative;
+  transition: background 0.3s ease;
+  min-height: 280px;
+}
+
+.step:hover {
+  background: #1e1b16;
+}
+
+.step .n {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--coral);
+  margin-bottom: 24px;
+}
+
+.step h4 {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  line-height: 1;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.step p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #b8b0a0;
+}
+
+@media (max-width: 960px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}

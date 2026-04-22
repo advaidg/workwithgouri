@@ -1,0 +1,23 @@
+:root {
+  --cream: #f4eee4;
+  --cream-2: #ede5d6;
+  --ink: #15130f;
+  --ink-soft: #2a2722;
+  --muted: #6b6559;
+  --line: #d9cfbe;
+  --coral: #ff5a1f;
+  --coral-deep: #e64a10;
+  --butter: #ffd166;
+  --lime: #c6f24e;
+  --plum: #3b1e1a;
+
+  --font-serif: 'Instrument Serif', serif;
+  --font-sans: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 600ms;
+  --ease-out-expo: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+}

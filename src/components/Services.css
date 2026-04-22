@@ -1,0 +1,135 @@
+.services {
+  background: var(--cream-2);
+}
+
+.services-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1400px;
+  margin: 0 auto 56px;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.services-head p {
+  max-width: 40ch;
+  color: var(--ink-soft);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.services-list {
+  max-width: 1400px;
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+}
+
+.svc {
+  display: grid;
+  grid-template-columns: 80px 1fr 2fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  transition: padding 0.3s ease;
+  overflow: hidden;
+}
+
+.svc::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.4s var(--ease-out-expo);
+  z-index: 0;
+}
+
+.svc > * {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.svc:hover::before {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.svc:hover > * {
+  color: var(--cream);
+}
+
+.svc:hover .svc-num {
+  color: var(--coral);
+}
+
+.svc:hover {
+  padding-left: 24px;
+}
+
+.svc-num {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.15em;
+}
+
+.svc-title {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1;
+}
+
+.svc-desc {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 50ch;
+}
+
+.svc-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.svc-meta .arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.svc:hover .arrow {
+  transform: rotate(-45deg);
+  background: var(--coral);
+  color: #fff;
+  border-color: var(--coral);
+}
+
+@media (max-width: 860px) {
+  .svc {
+    grid-template-columns: 50px 1fr;
+    gap: 12px;
+  }
+
+  .svc-desc,
+  .svc-meta {
+    grid-column: 2;
+  }
+}

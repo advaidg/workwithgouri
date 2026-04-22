@@ -1,0 +1,17 @@
+footer {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 40px 32px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+footer a {
+  color: var(--coral);
+}
