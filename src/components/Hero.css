@@ -28,6 +28,7 @@
 .hero-title {
   position: relative;
   padding-bottom: 40px;
+  padding-right: clamp(0px, calc(18vw + 72px), 360px);
 }
 
 .hero-title .big {
@@ -161,6 +162,10 @@
     right: auto;
     top: auto;
     margin: 0 auto 32px;
+  }
+
+  .hero-title {
+    padding-right: 0;
   }
 
   .hero-meta {
