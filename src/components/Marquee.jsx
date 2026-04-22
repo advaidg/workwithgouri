@@ -3,11 +3,11 @@ import './Marquee.css';
 const ITEMS = [
   'Reels Creator',
   'Content Specialist',
-  'Short-form Video',
-  'Trend-based Content',
+  'SEO',
+  'Quality Checking',
+  'WordPress',
   'Carousel Design',
-  'Social Media Creatives',
-  'Digital Marketing',
+  'Social Media Content',
 ];
 
 function Track() {

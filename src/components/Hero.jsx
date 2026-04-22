@@ -67,11 +67,11 @@ export default function Hero() {
         </div>
         <div>
           <span>Role</span>
-          <strong>Content & Marketing</strong>
+          <strong>Digital Marketer · Creator</strong>
         </div>
         <div>
           <span>Focus</span>
-          <strong>Reels · Creatives · Trends</strong>
+          <strong>Reels · SEO · Carousels</strong>
         </div>
         <div>
           <span>Since</span>

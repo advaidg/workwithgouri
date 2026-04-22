@@ -1,12 +1,12 @@
 import './About.css';
 
 const CHIPS = [
+  'Social Media Content',
+  'SEO',
+  'Quality Checking',
+  'WordPress',
   'Reels Creation',
-  'Social Media Creatives',
-  'Trend-based Content',
-  'Short-form Video',
-  'Carousel Design',
-  'Meta Ads',
+  'Carousels & Creatives',
 ];
 
 export default function About() {
@@ -31,17 +31,16 @@ export default function About() {
             .
           </h2>
           <p className="lede reveal delay-2">
-            Hi, I&apos;m <strong>Gouri</strong> — a content creator and digital
-            marketer focused on creating engaging and visually appealing social
-            media content. I&apos;ve completed my digital marketing training
-            from <strong>Digital Scholar</strong>, with skills in SEO,
-            WordPress, and Meta Ads.
+            Hi, I&apos;m <strong>Gouri</strong> — a digital marketer and content
+            creator trained at <strong>Digital Scholar</strong>, based in Kochi.
+            I specialize in social media content, SEO, and quality checking —
+            creating engaging and performance-driven content for brands.
           </p>
           <p className="lede reveal delay-3">
-            I specialize in reels, creatives, and trend-based content that helps
-            brands connect better with their audience. My goal is to create
-            content that grabs attention, builds consistency, and delivers real
-            engagement.
+            My work sits at the intersection of reels, carousels and
+            website-ready content — built for awareness, reach, and audience
+            education. I care about the small details that turn a passive scroll
+            into a real follow, save or click.
           </p>
           <div className="chips reveal delay-3">
             {CHIPS.map((chip) => (

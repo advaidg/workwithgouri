@@ -3,9 +3,9 @@ import './Stats.css';
 
 const STATS = [
   { to: 425, sym: 'K', label: 'Peak reel views', decimals: 0 },
-  { to: 50, sym: '+', label: 'Reels produced', decimals: 0 },
-  { to: 15, sym: '+', label: 'Brands collaborated', decimals: 0 },
-  { to: 98, sym: '%', label: 'On-time delivery', decimals: 0 },
+  { to: 20, sym: '+', label: 'Reels created', decimals: 0 },
+  { to: 30, sym: '+', label: 'Carousels & creatives', decimals: 0 },
+  { to: 3, sym: '+', label: 'Brands & projects', decimals: 0 },
 ];
 
 function Counter({ to, decimals = 0 }) {

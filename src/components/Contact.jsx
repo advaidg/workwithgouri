@@ -8,18 +8,13 @@ const LINKS = [
   },
   {
     lbl: 'WhatsApp',
-    value: '+91 90617 06748',
-    href: 'https://wa.me/919061706748',
+    value: '+91 94462 89491',
+    href: 'https://wa.me/919446289491',
   },
   {
     lbl: 'LinkedIn',
-    value: 'Connect on LinkedIn',
-    href: 'https://www.linkedin.com/',
-  },
-  {
-    lbl: 'Instagram',
-    value: 'Follow on Instagram',
-    href: 'https://www.instagram.com/',
+    value: '/in/gouri-gireesan',
+    href: 'https://www.linkedin.com/in/gouri-gireesan',
   },
 ];
 
