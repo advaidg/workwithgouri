@@ -21,7 +21,7 @@ export default function Hero() {
     if (!el) return;
     const onScroll = () => {
       const y = window.scrollY;
-      el.style.transform = `translateY(${Math.min(y * 0.15, 120)}px) rotate(${Math.min(y * 0.01, 4)}deg)`;
+      el.style.transform = `translateY(${Math.min(y * 0.08, 48)}px) rotate(${Math.min(y * 0.005, 2)}deg)`;
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
