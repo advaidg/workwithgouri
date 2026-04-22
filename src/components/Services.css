@@ -27,48 +27,23 @@
 
 .svc {
   display: grid;
-  grid-template-columns: 80px 1fr 2fr 1fr;
+  grid-template-columns: 70px 1fr 2fr auto;
   gap: 32px;
   align-items: center;
-  padding: 32px 0;
+  padding: 32px 4px;
   border-bottom: 1px solid var(--line);
   position: relative;
-  transition: padding 0.3s ease;
-  overflow: hidden;
-}
-
-.svc::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--ink);
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: transform 0.4s var(--ease-out-expo);
-  z-index: 0;
-}
-
-.svc > * {
-  position: relative;
-  z-index: 1;
-  transition: color 0.3s ease;
-}
-
-.svc:hover::before {
-  transform: scaleY(1);
-  transform-origin: top;
-}
-
-.svc:hover > * {
-  color: var(--cream);
-}
-
-.svc:hover .svc-num {
-  color: var(--coral);
+  transition: background 0.25s ease, padding 0.25s ease;
 }
 
 .svc:hover {
-  padding-left: 24px;
+  background: rgba(21, 19, 15, 0.03);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.svc:hover .svc-title {
+  color: var(--coral);
 }
 
 .svc-num {
@@ -80,8 +55,9 @@
 
 .svc-title {
   font-family: var(--font-serif);
-  font-size: clamp(28px, 3.4vw, 44px);
-  line-height: 1;
+  font-size: clamp(26px, 2.8vw, 36px);
+  line-height: 1.05;
+  transition: color 0.25s ease;
 }
 
 .svc-desc {

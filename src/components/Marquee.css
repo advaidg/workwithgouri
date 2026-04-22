@@ -1,16 +1,14 @@
 .marquee {
   background: var(--ink);
   color: var(--cream);
-  padding: 32px 0;
+  padding: 24px 0;
   overflow: hidden;
-  border-top: 1px solid var(--ink);
-  border-bottom: 1px solid var(--ink);
 }
 
 .marquee-track {
   display: flex;
-  gap: 48px;
-  animation: slide 32s linear infinite;
+  gap: 40px;
+  animation: slide 40s linear infinite;
   white-space: nowrap;
   width: max-content;
 }
@@ -22,16 +20,16 @@
 .marquee-item {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: clamp(40px, 6vw, 80px);
+  font-size: clamp(28px, 4vw, 56px);
   line-height: 1;
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 40px;
 }
 
 .marquee-item .dot {
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--coral);
   display: inline-block;

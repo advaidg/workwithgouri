@@ -8,17 +8,20 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   background: var(--cream);
   color: var(--ink);
   font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-}
-
-body {
-  cursor: none;
 }
 
 a {
@@ -37,7 +40,18 @@ button {
   background: none;
   border: none;
   color: inherit;
-  cursor: none;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 ::selection {
@@ -56,15 +70,15 @@ h3 {
 }
 
 .display {
-  font-size: clamp(64px, 13vw, 220px);
+  font-size: clamp(56px, 10vw, 140px);
 }
 
 .h2 {
-  font-size: clamp(48px, 8vw, 112px);
+  font-size: clamp(40px, 6vw, 84px);
 }
 
 .h3 {
-  font-size: clamp(32px, 4.2vw, 56px);
+  font-size: clamp(28px, 3.4vw, 44px);
 }
 
 .italic {
@@ -91,7 +105,7 @@ h3 {
 
 section {
   position: relative;
-  padding: 120px 32px;
+  padding: clamp(80px, 10vw, 140px) clamp(20px, 4vw, 48px);
 }
 
 .grid-bg {

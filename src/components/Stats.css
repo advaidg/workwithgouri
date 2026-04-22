@@ -1,20 +1,20 @@
 .stats {
   background: var(--ink);
   color: var(--cream);
-  padding: 80px 32px;
+  padding: 64px clamp(20px, 4vw, 48px);
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  max-width: 1400px;
+  gap: 20px;
+  max-width: 1200px;
   margin: 0 auto;
   border-top: 1px solid #2a2722;
 }
 
 .stat {
-  padding: 32px 20px 8px;
+  padding: 28px 18px 8px;
   border-right: 1px solid #2a2722;
   position: relative;
 }
@@ -25,7 +25,7 @@
 
 .stat .num {
   font-family: var(--font-serif);
-  font-size: clamp(56px, 8vw, 120px);
+  font-size: clamp(44px, 6.5vw, 92px);
   line-height: 1;
   letter-spacing: -0.02em;
 }

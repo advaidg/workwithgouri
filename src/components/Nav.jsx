@@ -11,6 +11,8 @@ const LINKS = [
 
 export default function Nav() {
   const [clock, setClock] = useState('KOCHI · 00:00 IST');
+  const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
     const tick = () => {
@@ -28,17 +30,42 @@ export default function Nav() {
     return () => clearInterval(id);
   }, []);
 
+  useEffect(() => {
+    let lastY = window.scrollY;
+    let ticking = false;
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        setScrolled(y > 24);
+        if (y > 120) {
+          setHidden(y > lastY);
+        } else {
+          setHidden(false);
+        }
+        lastY = y;
+        ticking = false;
+      });
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <nav className="top">
-      <div className="mark">
-        <b>GG</b>&nbsp;<span className="italic">/ creator</span>
-      </div>
+    <nav
+      className={`top${scrolled ? ' scrolled' : ''}${hidden ? ' hidden' : ''}`}
+    >
+      <a href="#top" className="mark" aria-label="Gouri Gireesan — home">
+        <b>GG</b>
+        <span className="italic">&nbsp;/ creator</span>
+      </a>
       <ul>
         {LINKS.map((link) => (
           <li key={link.href}>
-            <a href={link.href} data-hover>
-              {link.label}
-            </a>
+            <a href={link.href}>{link.label}</a>
           </li>
         ))}
       </ul>

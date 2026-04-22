@@ -1,7 +1,7 @@
 .hero {
-  padding-top: 100px;
-  padding-bottom: 0;
-  min-height: 100vh;
+  padding-top: 96px;
+  padding-bottom: 40px;
+  min-height: 92vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -13,7 +13,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.18em;
@@ -27,22 +27,22 @@
 
 .hero-title {
   position: relative;
-  padding-bottom: 24px;
+  padding-bottom: 40px;
 }
 
 .hero-title .big {
   display: block;
   font-family: var(--font-serif);
-  font-size: clamp(72px, 18vw, 300px);
-  line-height: 0.82;
-  letter-spacing: -0.035em;
+  font-size: clamp(64px, 12vw, 180px);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
 }
 
 .hero-title .big .char {
   display: inline-block;
-  transform: translateY(110%);
+  transform: translateY(100%);
   opacity: 0;
-  animation: charUp 0.8s var(--ease-out-expo) forwards;
+  animation: charUp 0.7s var(--ease-out-expo) forwards;
 }
 
 .hero-title .big.italic {
@@ -59,14 +59,14 @@
 
 .hero-portrait {
   position: absolute;
-  right: 6vw;
-  top: 14vh;
-  width: clamp(180px, 22vw, 320px);
-  height: clamp(240px, 30vw, 440px);
-  border-radius: 240px 240px 20px 20px;
+  right: clamp(20px, 4vw, 56px);
+  top: 15vh;
+  width: clamp(160px, 18vw, 260px);
+  height: clamp(200px, 24vw, 340px);
+  border-radius: 180px 180px 18px 18px;
   overflow: hidden;
   background: var(--coral);
-  box-shadow: 0 30px 60px -20px rgba(21, 19, 15, 0.3);
+  box-shadow: 0 24px 48px -18px rgba(21, 19, 15, 0.28);
   transform-origin: bottom center;
   z-index: 1;
 }
@@ -85,10 +85,10 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   border-top: 1px solid var(--line);
-  padding: 22px 0;
+  padding: 28px 0 0;
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
+  font-size: 10px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -98,19 +98,20 @@
   color: var(--ink);
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 12px;
-  margin-top: 4px;
-  letter-spacing: 0.05em;
+  font-size: 13px;
+  margin-top: 6px;
+  letter-spacing: 0.02em;
+  text-transform: none;
 }
 
 .hero-scroll {
   position: absolute;
-  left: 32px;
-  bottom: 180px;
+  left: clamp(20px, 4vw, 48px);
+  bottom: 200px;
   writing-mode: vertical-rl;
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.24em;
+  font-size: 10px;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--muted);
   display: flex;
@@ -121,9 +122,9 @@
 .hero-scroll::after {
   content: '';
   width: 1px;
-  height: 60px;
+  height: 48px;
   background: currentColor;
-  animation: scrollLine 2s ease-in-out infinite;
+  animation: scrollLine 2.4s ease-in-out infinite;
 }
 
 @keyframes scrollLine {
@@ -139,15 +140,30 @@
 }
 
 @media (max-width: 860px) {
+  .hero {
+    min-height: auto;
+    padding-top: 120px;
+  }
+
+  .hero-top {
+    grid-template-columns: 1fr;
+    padding-bottom: 24px;
+  }
+
+  .hero-top .right {
+    text-align: left;
+  }
+
   .hero-portrait {
     position: relative;
     right: auto;
     top: auto;
-    margin: 24px auto 0;
+    margin: 0 auto 32px;
   }
 
   .hero-meta {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .hero-scroll {

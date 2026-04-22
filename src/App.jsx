@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import Loader from './components/Loader.jsx';
-import CustomCursor from './components/CustomCursor.jsx';
 import Nav from './components/Nav.jsx';
 import Hero from './components/Hero.jsx';
 import Marquee from './components/Marquee.jsx';
@@ -37,19 +36,19 @@ export default function App() {
   return (
     <>
       <Loader />
-      <CustomCursor />
-      <div className="noise" aria-hidden="true" />
       <Nav />
-      <Hero />
-      <Marquee />
-      <About />
-      <Stats />
-      <Brands />
-      <Services />
-      <Works />
-      <Tools />
-      <Process />
-      <Contact />
+      <main>
+        <Hero />
+        <Marquee />
+        <About />
+        <Stats />
+        <Brands />
+        <Services />
+        <Works />
+        <Tools />
+        <Process />
+        <Contact />
+      </main>
       <Footer />
     </>
   );
