@@ -15,7 +15,7 @@
   grid-template-columns: minmax(0, 1fr) minmax(0, auto);
   gap: 24px;
   padding-bottom: 40px;
-  padding-right: clamp(0px, calc(18vw + 80px), 340px);
+  padding-right: clamp(0px, calc(26vw + 80px), 440px);
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.18em;
@@ -65,13 +65,13 @@
 .hero-portrait {
   position: absolute;
   right: clamp(20px, 4vw, 56px);
-  top: 15vh;
-  width: clamp(160px, 18vw, 260px);
-  height: clamp(200px, 24vw, 340px);
-  border-radius: 180px 180px 18px 18px;
+  top: 18vh;
+  width: clamp(240px, 26vw, 380px);
+  height: clamp(300px, 34vw, 500px);
+  border-radius: 220px 220px 20px 20px;
   overflow: hidden;
   background: var(--coral);
-  box-shadow: 0 24px 48px -18px rgba(21, 19, 15, 0.28);
+  box-shadow: 0 32px 60px -20px rgba(21, 19, 15, 0.3);
   transform-origin: bottom center;
   z-index: 1;
 }
