@@ -41,8 +41,39 @@ export default function Hero() {
         </div>
       </div>
 
+      <aside className="hero-note" aria-label="Approach">
+        <span className="hero-note-kicker">
+          <span className="dash" aria-hidden="true">—</span> Approach
+        </span>
+        <p className="hero-note-line">
+          Hooks that land in the first{' '}
+          <em>1.2 seconds</em>. Carousels that earn the swipe. Content that
+          shows up consistently and quietly compounds.
+        </p>
+        <div className="hero-note-tags">
+          <span>Reels</span>
+          <span className="dot" aria-hidden="true">●</span>
+          <span>SEO</span>
+          <span className="dot" aria-hidden="true">●</span>
+          <span>Carousels</span>
+          <span className="dot" aria-hidden="true">●</span>
+          <span>WordPress</span>
+        </div>
+      </aside>
+
       <div className="hero-portrait" data-hover ref={portraitRef}>
-        <img src="/portrait.jpg" alt="Gouri Gireesan" loading="eager" fetchpriority="high" width="320" height="440" />
+        <img
+          src="/portrait.jpg"
+          alt="Gouri Gireesan"
+          loading="eager"
+          fetchpriority="high"
+          width="320"
+          height="440"
+        />
+        <span className="portrait-caption" aria-hidden="true">
+          <span className="cap-line" />
+          Kochi, India
+        </span>
       </div>
 
       <div className="hero-title">
